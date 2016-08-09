@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Internet Of Things</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Theme CSS -->
+    <link href="css/agency.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<style type="text/css">
+    body {
+    background-color: black;
+    padding: 1px;
+}
+
+p {
+ font-family: "Times New Roman", Times, serif;
+ font-size: 16px;
+
+}
+
+}
+</style>
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">RUTGERS-WINLAB</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="index.html">Go to Home Page</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#description">Description</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#owloverview">Overview</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#demo">Demo</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#code">Source Code</a>
+                    </li>
+                   <li>
+                        <a class="page-scroll" href="#team">Team</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+<section id="description">
+<div class="container">
+  <div class="jumbotron">
+    <h2 style="color:darkblue;">Project: People Counting System </h2>
+    <h4>Description</h4><hr>
+<p> A <strong>people counter</strong> is a device that can be used to measure the number and direction of people traversing a certain passage or entrance.</p>
+
+<b> USE CASES </b><br><br>
+<ol>
+    <li><strong> Shopping Malls : </strong> Shopping centers use people counters to measure the number of visitors. People counters also assist in measuring the areas of 'hot spots', where statistics gathered by people counters are often used to justify rental rates </li> <br>
+
+    <li><strong> Smart Office buildings : </strong> Commercial buildings utilize people counters to measure the use of different parts of the building at different times. This information can then be used to intelligently optimize the energy usage in the building (e.g. air conditioning needs, etc.), Also in case of fire hazards, the system can be used to approximate the number of people still stuck inside the office. </li><br>
+
+    <li><strong> Stadiums and Concert Halls : </strong> SThere are often large traffic flows before and after an event. People counters are used to measure the traffic flows of previous events, and the traffic patterns are used to improve traffic flow, particularly when entering and exiting.</li> <br>
+
+    <li><strong> Museums and Libraries : </strong> Many non-profit organizations use visitor counts as evidence when making applications for finance, for use when planning for seasonal staffing, and other strategic operational decisions. In cases where tickets are not sold, such as in museums and libraries, counting is either automated, or staff keep a log of how many clients use different services.</li> <br>
+
+
+
+
+</ol>
+    
+
+
+ </section>
+
+<section id="owloverview">
+<div class="container">
+  <div class="jumbotron">
+  <h2> Overview </h2><hr>
+    <img src="img/peoplecount.png"><br><br>
+
+    <p> We position an IP camera in such a way that we get an overview of the entrance from where people enter or exit the building. Since we access the IP camera over the network we get a stream of images every second. We run our algorithm on these frames to continuously detect people and monitor whether they cross a virtual line based on which we increment or decrement the count of people present in the building. </p>
+
+    <p> We have implemented this system in C++ as well as in python using openCV 3.1</p>
+    <ol>
+        <li> OpenCV 3.1, Windows 10, Microsoft Visual Studio 2015 and an IP Camera.</li><br>
+        <li>OpenCV 3.1, Ubuntu 16.04, Python 2.7 and an IP camera.</li><br>
+        
+    </ol>
+
+    <a href= "ipcam.html" target="_blank" style="color: blue;">Click this link to access IPCamera at Winlab</a>
+    <br>
+    Note: IP Camera can only be accessed if you are connected to winlab wifi
+    </div>
+</div>
+
+</section>
+
+<section id="demo">
+<div class="container">
+  <div class="jumbotron">
+  <h2> Project Demo </h2><hr>
+    
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SewTS0bj1gU" frameborder="0" allowfullscreen></iframe>
+<br><br>
+<p style=" font-size:17px">  Click the link below to check out the web application for this project: </p>
+<a target="_blank" href="occupancy/count.html" style="color: blue;"> Web application </a><br>
+    
+    </div>
+</div>
+
+</section>
+
+<section id="code">
+<div class="container">
+  <div class="jumbotron">
+  <h2> Source Code </h2><hr>
+    <ul style="font-size:16px;  " >
+        <li><a href="https://github.com/OwlPlatform/cpp-owl-common" style="color: blue;"> Owl Platform C++ Libraries, Github Link </a></li>
+        <li><a href="https://github.com/OwlPlatform/cpp-owl-sensor" style="color: blue;"> C++ library for sending sensor data to the world model, Github Link </a></li>
+        <li><a href="https://github.com/OwlPlatform/aggregator" style="color: blue;">A Java-based sensor sample aggregator for the Owl Platform, Github Link</a></li>
+
+</ul>
+
+    </div>
+</div>
+
+</section>
+
+
+<!-- Services Section -->
+    <section id="team">
+        <div class="container">
+        <div class= "jumbotron">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Team</h2>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-6">
+                
+                    
+                       <img src="img/team/vishal.jpg" class="img-rounded" alt="Cinque Terre" width="190" height="190">
+                         <h4 class="service-heading" style="color:black; font-size:18px;">VISHALSINGH HAJERI</h4>
+                    <p style="font-size:17px">Department of Electrical and Computer <br>
+                    Research Interests: Computer Vision, IoT, Algorithms</p>
+                    
+                </div>
+                 <div class="col-md-6">
+                   
+                      <img src="img/team/feng.jpg" class="img-rounded" alt="Cinque Terre" width="190" height="190">
+                       <h4 class="service-heading" style="color:black; font-size:18px;">JUNJIE FENG</h4>
+                    <p style="font-size:17px">Department of Electrical and Computer <br>
+                    Research Interests: Computer Vision, Graphs, Operating System</p>
+
+              
+                <div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+
+
+</body>
+</html>

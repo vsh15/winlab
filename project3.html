@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Internet Of Things</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Theme CSS -->
+    <link href="css/agency.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<style type="text/css">
+    body {
+    background-color: black;
+    padding: 1px;
+}
+
+p {
+ font-family: "Times New Roman", Times, serif;
+ font-size: 16px;
+
+}
+
+}
+</style>
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">RUTGERS-WINLAB</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="index.html">Go to Home Page</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#description">Description</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#owloverview">Overview</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#demo">Demo</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#code">Source Code</a>
+                    </li>
+                   <li>
+                        <a class="page-scroll" href="#team">Team</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+<section id="description">
+<div class="container">
+  <div class="jumbotron">
+    <h2 style="color:darkblue;">Project: Employee Authentication using Face Recognition </h2>
+    <h4>Description</h4><hr>
+<p> 
+Face recognition is an easy task for humans. Experiments have shown, that even one to three day old babies are able to distinguish between known faces. So how hard could it be for a computer? It turns out we know little about human recognition to date. Are inner features (eyes, nose, mouth) or outer features (head shape, hairline) used for a successful face recognition? How do we analyze an image and how does the brain encode it? It was shown by David Hubel and Torsten Wiesel, that our brain has specialized nerve cells responding to specific local features of a scene, such as lines, edges, angles or movement. Since we don’t see the world as scattered pieces, our visual cortex must somehow combine the different sources of information into useful patterns. Automatic face recognition is all about extracting those meaningful features from an image, putting them into a useful representation and performing some kind of classification on them.
+</p>
+
+<b> Face Recognition Algorithms : </b><br><br>
+<ol>
+    <li><strong> Eigen Faces  </strong> </li> <br>
+
+    <li><strong> Fisher Faces </strong> </li><br>
+
+    <li><strong> Local Binary Patterns Histograms  </strong> </li> <br>
+
+   
+</ol>
+    
+
+
+ </section>
+
+<section id="owloverview">
+<div class="container">
+  <div class="jumbotron">
+  <h2> Overview </h2><hr>
+    <img src="img/facerec_flowchart.png" height="500" width="1000"><br><br>
+
+    <p> In our project, we use OpenCV 3.1, which is an open source computer vision and machine learning software library. This library includes a comphrehensive set of both classic and state-of-the-art computer vision and machine learing algorithms.</p>
+
+<p>We use these algorithms to detect faces in the frames which are extracted from the IP camera's video stream and then build up our training database to store the individuals' faces with several different expressions. Before we are able to recognize faces, the training databese is used to train the "recognizer" function and each individual is labled with a integer number to distinguish them. For each frame in the video stream, we compare the sample faces with our training dataset.
+
+Based on the face recognition system, we build up our web application to show up the status of each person in our database. </p>
+
+    <p> We have implemented this system  using OpenCV 3.1, Ubuntu 16.04, Python 2.7 and an IP camera.</p><br>
+    
+    </div>
+</div>
+
+</section>
+
+<section id="demo">
+<div class="container">
+  <div class="jumbotron">
+  <h2> Project Demo </h2><hr>
+    
+<iframe width="420" height="315" src="https://www.youtube.com/embed/gMn_04EnDmE" frameborder="0" allowfullscreen></iframe>
+<br><br>
+<p style=" font-size:17px">  Click the link below to check out the web application for this project: </p>
+<a target="_blank" href="winlab/winlab.php" style="color: blue;"> Web application </a><br>
+    
+    </div>
+</div>
+
+</section>
+
+<section id="code">
+<div class="container">
+  <div class="jumbotron">
+  <h2> Source Code </h2><hr>
+    <ul style="font-size:16px;  " >
+        <li><a href="https://github.com/bytefish/libfacerec" style="color: blue;"> Face recognition library in openCV </a></li>
+        <li><a href="https://github.com/OwlPlatform/cpp-owl-sensor" style="color: blue;"> C++ library for sending sensor data to the world model, Github Link </a></li>
+        <li><a href="https://github.com/OwlPlatform/aggregator" style="color: blue;">A Java-based sensor sample aggregator for the Owl Platform, Github Link</a></li>
+
+</ul>
+
+    </div>
+</div>
+
+</section>
+
+
+<!-- Services Section -->
+    <section id="team">
+        <div class="container">
+        <div class= "jumbotron">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Team</h2><hr>
+                    <br>
+                   
+                </div>
+            </div>
+             <div class="row">
+                <div class="col-lg-12 text-center">
+                    <img src="img/feng_vishal.png" height="400" width="1000">
+                    <br>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <div class="row text-center">
+               <div class="col-md-6">
+                   
+                      <img src="img/team/feng.jpg" class="img-rounded" alt="Cinque Terre" width="190" height="190">
+                       <h4 class="service-heading" style="color:black; font-size:18px;">JUNJIE FENG</h4>
+                    <p style="font-size:17px">Department of Electrical and Computer <br>
+                    Research Interests: Computer Vision, Graphs, Operating System</p>
+
+              
+                </div>
+                <div class="col-md-6">
+                
+                    
+                       <img src="img/team/vishal.jpg" class="img-rounded" alt="Cinque Terre" width="190" height="190">
+                         <h4 class="service-heading" style="color:black; font-size:18px;">VISHALSINGH HAJERI</h4>
+                    <p style="font-size:17px">Department of Electrical and Computer <br>
+                    Research Interests: Computer Vision, IoT, Algorithms</p>
+                    
+                </div>
+              
+            </div>
+            </div>
+        </div>
+    </section>
+
+
+
+</body>
+</html>

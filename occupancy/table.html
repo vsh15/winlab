@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<style>
+#images{
+
+height: 100px;
+
+}
+#demo{
+    font-family: "Times New Roman";
+    font-size: 80px;
+}
+body{
+
+	/* background: linear-gradient(rgb(255, 255, 22),rgb(0, 0, 222)); */
+	background: rgb(153, 220, 200);
+	font: bold;
+}
+
+table,th,td{
+
+	  border: 4px solid black;
+    border-collapse: collapse;
+text-align: center;
+
+}
+</style>
+
+
+
+</head>
+<body>
+	
+<h2> Check availability </h2>
+<br>
+	<table width="50%" align="center">
+	<tr> 
+		<th>Room</th>
+		<th> Image </th>
+		<th> Availability</th>
+
+	</tr>
+	<tr>
+		<td> Conference room1 </td>
+		<td><img src="conf.jpg" height="100" width="120"></td>
+		<td><img class="images" id="c1" src="1.jpg" width="100"></td>
+
+	</tr>	
+	<tr>
+		<td> Conference room2 </td>
+		<td><img src="conf1.jpg" height="90" width="120"></td>
+		<td><img class="images" id="c2" src="1.jpg" width="100"></td>
+
+	</tr>	
+	<tr>
+		<td> Kitchen </td>
+		<td><img src="kitchen.jpg" height="90" width="120"></td>
+		<td><img class="images" id="kitchen" src="1.jpg" width="100"></td>
+
+	</tr>	
+	<tr>
+		<td> Prof. Richard Martin </td>
+		<td><img src="martin.jpg" height="90" width="120"></td>
+		<td><img class="images" id="martin" src="1.jpg" width="100"></td>
+
+	</tr>	
+	<tr>
+		<td> Prof. Ray Chaudhuri </td>
+		<td><img src="ray.jpg" height="90" width="120"></td>
+		<td><img class="images" id="martin" src="1.jpg" width="100"></td>
+
+	</tr>	
+	<tr>
+		<td> Ivan Seskar </td>
+		<td><img src="ivan.jpg" height="100" width="120"></td>
+		<td><img class="images" id="martin" src="1.jpg" width="100"></td>
+
+	</tr>	
+
+	</table>
+
+
+
+<script>
+	
+
+setInterval(function loadDoc() {
+var imagesource1= "1.jpg";
+var imagesource2 = "2.jpg";
+  var xhttp = new XMLHttpRequest();
+
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+    //  document.getElementById("demo").innerHTML = xhttp.responseText;
+      var xyz= xhttp.responseText;
+			      if(xyz==0)
+			      {
+			      	 document.getElementById("c1").src=imagesource2;
+			      	document.getElementById("kitchen").src=imagesource1;
+			      }
+			      	else
+			      {
+			      		 document.getElementById("c1").src=imagesource1;
+			      		 document.getElementById("kitchen").src=imagesource2;
+			      		 
+			    }
+}
+  };
+  xhttp.open("GET", "v.txt", true);
+  xhttp.send();
+},2000);
+
+
+</script>
+
+
+</body>
+</html>

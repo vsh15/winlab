@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Internet Of Things</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Theme CSS -->
+    <link href="css/agency.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<style type="text/css">
+    body {
+    background-color: black;
+    padding: 1px;
+}
+
+p {
+ font-family: "Times New Roman", Times, serif;
+
+}
+
+}
+</style>
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">RUTGERS-WINLAB</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="index.html">Go to Home Page</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#description">Description</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#owloverview">Overview</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#demo">Demo</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#code">Source Code</a>
+                    </li>
+                   <li>
+                        <a class="page-scroll" href="#team">Team</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+<section id="description">
+<div class="container">
+  <div class="jumbotron">
+    <h2 style="color:blue;">Project: Check Availability of Professor</h2>
+    <h4>Description</h4><hr>
+
+    <p> This Project is built around the idea of using a capacitance sensor to detect if someone is sitting on a chair. The distinguishing feature of the one-inch-square Pipsqueak sensors is their incredibly long battery life. With up to 10 years of life on a single coin cell battery, these ‘Pips’ offer a simple set-and-forget way to monitor environmental conditions around a home or in an office.
+    </p>
+    <p>
+    Pips can detect the presence of water, ambient light and temperature, and -- via a magnetic switch -- whether a door, drawer or window is open or closed. Because they’re so small and the batteries last so long, they’re particularly suited to spots that are hard to access but need to be monitored over the long term -- like to watch for leaks in a basement or crawlspace.
+
+    Owl Platform was designed by Inpoint Systems, makers of the Roll-Call RFID inventory system for businesses. For the Pipsqueak sensors, Inpoint designed sensing and reporting protocols that minimize power consumption. The Pips take sensor readings only as often as they need to, and report via radio to a base station only when they detect a meaningful change. At lengthy intervals they ping the base station to let it know they’re still functioning and give an estimate of remaining battery life.
+
+    The base station itself needs an Ethernet connection in its current form, but could eventually have WiFi as well. Data from the Pips is sent through the base station to the cloud-based service at Owl Platform Online. Users can access a browser interface to check each sensor’s current status, grab logs of past data, and set conditions for text or email alerts from each sensor. The cloud service will carry a subscription fee, which will be required to use any apps that take advantage of the forthcoming web API. But the platform software is open source, so users can set up their own servers to monitor their Pips.
+
+    </p>
+
+
+ </section>
+
+<section id="owloverview">
+<div class="container">
+  <div class="jumbotron">
+  <h2> OWL Platform Overview </h2><hr>
+    <img src="img/owloverview.png">
+    </div>
+</div>
+
+</section>
+
+<section id="demo">
+<div class="container">
+  <div class="jumbotron">
+  <h2> Project Demo </h2><hr>
+    
+<iframe width="420" height="315" src="https://www.youtube.com/embed/YZNKHipi1f0" frameborder="0" allowfullscreen></iframe>
+<br><br>
+<p style=" font-size:17px">  Click the link below to check out the web application for this project: </p>
+<a target="_blank" href="occupancy/table.html" style="color: blue;"> Web application </a><br>
+    
+    </div>
+</div>
+
+</section>
+
+<section id="code">
+<div class="container">
+  <div class="jumbotron">
+  <h2> Source Code </h2><hr>
+    <ul style="font-size:16px;  " >
+        <li><a href="https://github.com/OwlPlatform/cpp-owl-common" style="color: blue;"> Owl Platform C++ Libraries, Github Link </a></li>
+        <li><a href="https://github.com/OwlPlatform/cpp-owl-sensor" style="color: blue;"> C++ library for sending sensor data to the world model, Github Link </a></li>
+        <li><a href="https://github.com/OwlPlatform/aggregator" style="color: blue;">A Java-based sensor sample aggregator for the Owl Platform, Github Link</a></li>
+
+</ul>
+
+    </div>
+</div>
+
+</section>
+
+
+<!-- Services Section -->
+    <section id="team">
+        <div class="container">
+        <div class= "jumbotron">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Team</h2>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-6">
+                
+                    
+                       <img src="img/team/vishal.jpg" class="img-rounded" alt="Cinque Terre" width="190" height="190">
+                         <h4 class="service-heading" style="color:black; font-size:18px;">VISHALSINGH HAJERI</h4>
+                    <p style="font-size:17px">Department of Electrical and Computer <br>
+                    Research Interests: Computer Vision, IoT, Algorithms</p>
+                    
+                </div>
+                 <div class="col-md-6">
+                   
+                      <img src="img/team/feng.jpg" class="img-rounded" alt="Cinque Terre" width="190" height="190">
+                       <h4 class="service-heading" style="color:black; font-size:18px;">JUNJIE FENG</h4>
+                    <p style="font-size:17px">Department of Electrical and Computer <br>
+                    Research Interests: Computer Vision, Graphs, Operating System</p>
+
+              
+                <div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+
+
+</body>
+</html>
